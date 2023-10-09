@@ -1,5 +1,3 @@
-
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/Constants/colors.dart';
@@ -38,7 +36,7 @@ class _ProductBgState extends State<ProductBg> {
             ));
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-    extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: true,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

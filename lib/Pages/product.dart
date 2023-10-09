@@ -216,8 +216,12 @@ class _ProductsState extends State<Products> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           InkWell(
-                                            onTap: (){
-                                              Navigator.push(context, MaterialPageRoute(builder: (context) => const Product1()));
+                                            onTap: () {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          const Product1()));
                                             },
                                             child: BoldText(
                                                 text: 'Boston Lettuce',
@@ -238,40 +242,57 @@ class _ProductsState extends State<Products> {
                                             ],
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10, vertical: 8),
                                             child: Row(
                                               children: [
                                                 Container(
                                                     height: 40,
                                                     width: 70,
-                                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                                                    decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20)),
                                                     child: ElevatedButton(
-                                                        style: 
-                                                        ElevatedButton.styleFrom(
-                                                          elevation: 0,
-                                                           backgroundColor: AppColors.white,
-                                                          side: BorderSide(color: AppColors.borderColor)
-                                                        ),
-                                                        
-                                                        onPressed: (){}, child: Icon(CupertinoIcons.heart,color: AppColors.secTextColor,)))
-                                                ,const SizedBox(width: 30,)
-                                                    ,Container(
-                                                        height: 40,
-                                                        width: 70,
-                                                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                                                        child: ElevatedButton(
-                                                            style: ElevatedButton.styleFrom(
-                                                              backgroundColor: AppColors.btnColor
-                                                            ),
-                                                            onPressed: (){}, child:const Icon(CupertinoIcons.cart)
-                                                        )
-                                          )
-                                                ,const SizedBox(width: 20,)
-
+                                                        style: ElevatedButton.styleFrom(
+                                                            elevation: 0,
+                                                            backgroundColor:
+                                                                AppColors.white,
+                                                            side: BorderSide(
+                                                                color: AppColors
+                                                                    .borderColor)),
+                                                        onPressed: () {},
+                                                        child: Icon(
+                                                          CupertinoIcons.heart,
+                                                          color: AppColors
+                                                              .secTextColor,
+                                                        ))),
+                                                const SizedBox(
+                                                  width: 30,
+                                                ),
+                                                Container(
+                                                    height: 40,
+                                                    width: 70,
+                                                    decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(20)),
+                                                    child: ElevatedButton(
+                                                        style: ElevatedButton
+                                                            .styleFrom(
+                                                                backgroundColor:
+                                                                    AppColors
+                                                                        .btnColor),
+                                                        onPressed: () {},
+                                                        child: const Icon(
+                                                            CupertinoIcons
+                                                                .cart))),
+                                                const SizedBox(
+                                                  width: 20,
+                                                )
                                               ],
                                             ),
                                           )
-
                                         ],
                                       )
                                     ],

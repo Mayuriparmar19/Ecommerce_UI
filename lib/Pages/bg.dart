@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class BgForProduct extends StatefulWidget {
   const BgForProduct({super.key});
 
@@ -15,9 +16,12 @@ class _BgForProductState extends State<BgForProduct> {
           Positioned(
               right: -8,
               child: Container(
-                height:200 ,
+                height: 200,
                 width: 200,
-                decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('Assets/Images/Vector (2).png'),fit: BoxFit.cover)),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('Assets/Images/Vector (2).png'),
+                        fit: BoxFit.cover)),
               )),
         ],
       ),

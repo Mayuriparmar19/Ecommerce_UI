@@ -7,7 +7,6 @@ import 'package:foodapp_ui/Pages/product.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
-
   @override
   State<Home> createState() => _HomeState();
 }
@@ -81,43 +80,55 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          const SizedBox(height: 20,),
+          const SizedBox(
+            height: 20,
+          ),
           Expanded(
             child: GridView.builder(
               itemCount: 8,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: 0.87,
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10
-              ),
+                  childAspectRatio: 0.87,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10),
               physics: const BouncingScrollPhysics(),
               shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
-                return
-                  InkWell(
-                    onTap: (){
-
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Products(),));
-                    },
-                    child: Container(
-                      height: 60,
-                     decoration: BoxDecoration(
-                       borderRadius: BorderRadius.circular(10),
-                       color: AppColors.white,
-                       image: const DecorationImage(image: AssetImage('Assets/Images/fr.png'),fit: BoxFit.fitWidth,alignment: Alignment.topCenter, )
-                     ) ,
-                      margin: const EdgeInsets.all(8.0),
-                      child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                              BoldText(text: 'Vegetables', size: 18.8, color: AppColors.primaryColor),
-                          ModifiedText(text: '(29)', size: 14, color: AppColors.secTextColor)
-                        ],
-                      ),
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Products(),
+                        ));
+                  },
+                  child: Container(
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: AppColors.white,
+                        image: const DecorationImage(
+                          image: AssetImage('Assets/Images/fr.png'),
+                          fit: BoxFit.fitWidth,
+                          alignment: Alignment.topCenter,
+                        )),
+                    margin: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        BoldText(
+                            text: 'Vegetables',
+                            size: 18.8,
+                            color: AppColors.primaryColor),
+                        ModifiedText(
+                            text: '(29)',
+                            size: 14,
+                            color: AppColors.secTextColor)
+                      ],
                     ),
-                  );
+                  ),
+                );
               },
             ),
           ),

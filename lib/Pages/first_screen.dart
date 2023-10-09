@@ -28,7 +28,7 @@ class _FirstScreenState extends State<FirstScreen> {
             children: [
               Expanded(
                 child: Padding(
-                  padding:   EdgeInsets.only(top: topPadding),
+                  padding: EdgeInsets.only(top: topPadding),
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -63,7 +63,7 @@ class _FirstScreenState extends State<FirstScreen> {
                           color: AppColors.secTextColor,
                           size: 18,
                           text:
-                          "       When placing an order, select the option\n “Contactless delivery” and the courier will leave\n                          your order at the door.",
+                              "       When placing an order, select the option\n “Contactless delivery” and the courier will leave\n                          your order at the door.",
                         ),
                         const SizedBox(
                           height: 35,
