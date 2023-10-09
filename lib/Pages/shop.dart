@@ -1,9 +1,13 @@
+import 'package:animated_switch/animated_switch.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/Components/text.dart';
 import 'package:foodapp_ui/Constants/colors.dart';
+import 'package:foodapp_ui/Pages/bottom_nav.dart';
+import 'package:foodapp_ui/Pages/cat.dart';
 
 import '../Constants/conste.dart';
+import 'card_payment.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -26,7 +30,10 @@ class _CartState extends State<Cart> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+            // Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavBar()));
+          },
           icon: Icon(
             CupertinoIcons.back,
             color: AppColors.primaryColor,
@@ -58,7 +65,12 @@ class _CartState extends State<Cart> {
                               size: w! / 20,
                               color: AppColors.primaryColor),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const CardPay()));
+                              },
                               child: BoldText(
                                 text: 'CHANGE',
                                 size: w! / 25,
@@ -255,17 +267,14 @@ class _CartState extends State<Cart> {
                               text: 'Non-contact-delivery',
                               size: w! / 20,
                               color: AppColors.primaryColor),
-                          Switch(
-                            activeColor: AppColors.white,
-                              activeTrackColor: AppColors.selectedBg,
-                              inactiveThumbColor: AppColors.white,
-                              inactiveTrackColor: AppColors.secTextColor,
-                              value: isSwitched,
-                              onChanged: (value) {
-                                setState(() {
-                                  isSwitched = value;
-                                });
-                              })
+                          AnimatedSwitch(
+                            textOn: "Yes",
+                            colorOn: AppColors.selectedBg,
+                            textOff: "No",
+                            colorOff: AppColors.secTextColor,
+                            textStyle: TextStyle(
+                                color: AppColors.selected, fontSize: w! / 24),
+                          ),
                         ],
                       ),
                     ],
