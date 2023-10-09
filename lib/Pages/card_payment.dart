@@ -45,10 +45,10 @@ class _CardPayState extends State<CardPay> {
                   size: 25,
                   color: AppColors.primaryColor),
             ),
-             Image(
+            Image(
               image: const AssetImage('Assets/Images/carimg.png'),
               fit: BoxFit.cover,
-              height: w!/1.3,
+              height: w! / 1.3,
             ),
             const Center(
               child: Image(
@@ -73,7 +73,7 @@ class _CardPayState extends State<CardPay> {
                 decoration: InputDecoration(
                   hintText: 'EX:Abc Xyz',
                   hintStyle:
-                  TextStyle(color: AppColors.secTextColor, fontSize: 15),
+                      TextStyle(color: AppColors.secTextColor, fontSize: 15),
                   filled: true,
                   fillColor: AppColors.white,
                   border: OutlineInputBorder(
@@ -110,10 +110,9 @@ class _CardPayState extends State<CardPay> {
                 showCursor: false,
                 decoration: InputDecoration(
                   suffixIcon: Image.asset('Assets/Images/mc_symbol 1.png'),
-
                   hintText: 'EX:4747  4747  4747  4747',
                   hintStyle:
-                  TextStyle(color: AppColors.secTextColor, fontSize: 15),
+                      TextStyle(color: AppColors.secTextColor, fontSize: 15),
                   filled: true,
                   fillColor: AppColors.white,
                   border: OutlineInputBorder(
@@ -133,123 +132,135 @@ class _CardPayState extends State<CardPay> {
                 ),
               ),
             ),
-              SizedBox(height: size.height*0.01,),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                 Row(
-
-                   children: [
-                     Padding(
-                       padding: const EdgeInsets.symmetric(horizontal: 28),
-                       child: ModifiedText(text: 'Expiry date', size: w!/25, color: AppColors.secTextColor),
-                     ),
-                      SizedBox(width: size.width*0.18,),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 28),
-                        child: ModifiedText(text: 'CVV', size: w!/25, color: AppColors.secTextColor),
-                      ),
-                   ],
-                 ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18),
-                        child: SizedBox(
-                            height: 50,
-                            width: 160,
-                            child: TextFormField(
-                              keyboardType: TextInputType.number,
-                              showCursor: false,
-                              decoration: InputDecoration(
-                                hintText: 'EX:09/24',
-                                hintStyle:
-                                TextStyle(color: AppColors.secTextColor, fontSize: 15),
-                                filled: true,
-                                fillColor: AppColors.white,
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                    borderSide: BorderSide(color: AppColors.secTextColor)),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(color: AppColors.borderColor),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
-                                    color: AppColors.borderColor,
-                                  ),
-                                ),
-                                focusColor: AppColors.white,
-                              ),
-                            )),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18),
-                        child: SizedBox(
-                            height: 50,
-                            width: 160,
-                            child: TextFormField(
-                              keyboardType: TextInputType.number,
-                              showCursor: false,
-                              decoration: InputDecoration(
-                                suffixIcon: Image.asset('Assets/Images/Hint.png'),
-                                hintText: 'EX:456',
-                                hintStyle:
-                                TextStyle(color: AppColors.secTextColor, fontSize: 15),
-                                filled: true,
-                                fillColor: AppColors.white,
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                    borderSide: BorderSide(color: AppColors.secTextColor)),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(color: AppColors.borderColor),
-                                ),
-                                enabledBorder: OutlineInputBorder(
+            SizedBox(
+              height: size.height * 0.01,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 28),
+                      child: ModifiedText(
+                          text: 'Expiry date',
+                          size: w! / 25,
+                          color: AppColors.secTextColor),
+                    ),
+                    SizedBox(
+                      width: size.width * 0.18,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 28),
+                      child: ModifiedText(
+                          text: 'CVV',
+                          size: w! / 25,
+                          color: AppColors.secTextColor),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 18),
+                      child: SizedBox(
+                          height: 50,
+                          width: 160,
+                          child: TextFormField(
+                            keyboardType: TextInputType.number,
+                            showCursor: false,
+                            decoration: InputDecoration(
+                              hintText: 'EX:09/24',
+                              hintStyle: TextStyle(
+                                  color: AppColors.secTextColor, fontSize: 15),
+                              filled: true,
+                              fillColor: AppColors.white,
+                              border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(
-                                    color: AppColors.borderColor,
-                                  ),
-                                ),
-                                focusColor: AppColors.white,
+                                      color: AppColors.secTextColor)),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide:
+                                    BorderSide(color: AppColors.borderColor),
                               ),
-                            )),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(
+                                  color: AppColors.borderColor,
+                                ),
+                              ),
+                              focusColor: AppColors.white,
+                            ),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 18),
+                      child: SizedBox(
+                          height: 50,
+                          width: 160,
+                          child: TextFormField(
+                            keyboardType: TextInputType.number,
+                            showCursor: false,
+                            decoration: InputDecoration(
+                              suffixIcon: Image.asset('Assets/Images/Hint.png'),
+                              hintText: 'EX:456',
+                              hintStyle: TextStyle(
+                                  color: AppColors.secTextColor, fontSize: 15),
+                              filled: true,
+                              fillColor: AppColors.white,
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                      color: AppColors.secTextColor)),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide:
+                                    BorderSide(color: AppColors.borderColor),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(
+                                  color: AppColors.borderColor,
+                                ),
+                              ),
+                              focusColor: AppColors.white,
+                            ),
+                          )),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: size.height * .05,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: SizedBox(
+                    height: size.height * .06,
+                    width: size.width * .90,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.btnColor,
                       ),
-                    ],
-                  ),
-                   SizedBox(
-                    height: size.height*.05,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: SizedBox(
-                      height: size.height * .06,
-                      width: size.width * .90,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.btnColor,
-                        ),
-                        onPressed: () {
-                          Navigator.pop(context);
-                          // Navigator.of(context).push(MaterialPageRoute(
-                          //   builder: (context) => const BottomNavBar(),
-                          // ));
-                        },
-                        child: BoldText(
-                          text: 'Use this card',
-                          size: 19,
-                          color: AppColors.white,
-                        ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //   builder: (context) => const BottomNavBar(),
+                        // ));
+                      },
+                      child: BoldText(
+                        text: 'Use this card',
+                        size: 19,
+                        color: AppColors.white,
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: size.height*.05,
-                  ),
-
-                ],
-              )
+                ),
+                SizedBox(
+                  height: size.height * .05,
+                ),
+              ],
+            )
           ],
         ),
       ),
