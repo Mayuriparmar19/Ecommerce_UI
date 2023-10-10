@@ -49,8 +49,10 @@ class _ProductBgState extends State<ProductBg> {
               child: CarouselSlider.builder(
                 itemCount: pages.length,
                 options: CarouselOptions(
+                  padEnds: false,
                   height: 650,
-                  viewportFraction: 0.8,
+                  viewportFraction: 1,
+                  enlargeStrategy: CenterPageEnlargeStrategy.height,
                   initialPage: 0,
                   enableInfiniteScroll: true,
                   reverse: false,
