@@ -18,6 +18,7 @@ class ModifiedText extends StatelessWidget {
   }
 }
 
+
 class BoldText extends StatelessWidget {
   final String text;
   final double size;

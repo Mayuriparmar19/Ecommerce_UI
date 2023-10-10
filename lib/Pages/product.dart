@@ -4,6 +4,7 @@ import 'package:foodapp_ui/Constants/colors.dart';
 import 'package:foodapp_ui/Pages/bg.dart';
 import 'package:foodapp_ui/Pages/product1.dart';
 import '../Components/text.dart';
+import '../Constants/conste.dart';
 
 class Products extends StatefulWidget {
   const Products({Key? key});
@@ -19,6 +20,10 @@ class _ProductsState extends State<Products> {
 
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+    h = MediaQuery.of(context).size.height;
+    Size size  = MediaQuery.of(context).size;
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: AppColors.bgColor,
@@ -49,7 +54,7 @@ class _ProductsState extends State<Products> {
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: BoldText(
                     text: 'Vegetables',
-                    size: 25,
+                    size: w!/17,
                     color: AppColors.primaryColor,
                   ),
                 ),
@@ -64,12 +69,12 @@ class _ProductsState extends State<Products> {
                       prefixIcon: Icon(
                         CupertinoIcons.search,
                         color: AppColors.primaryColor,
-                        size: 25,
+                        size: w!/18.8,
                       ),
                       hintText: 'Search',
                       hintStyle: TextStyle(
                         color: AppColors.borderColor,
-                        fontSize: 20,
+                        fontSize: w!/20,
                         fontStyle: FontStyle.italic,
                       ),
                       focusedBorder: OutlineInputBorder(
@@ -92,8 +97,8 @@ class _ProductsState extends State<Products> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: size.height*0.02,
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -111,6 +116,7 @@ class _ProductsState extends State<Products> {
                             label: Text(
                               'Cabbage and lettuce (14)',
                               style: TextStyle(
+
                                 color: selectedValues.contains(index)
                                     ? AppColors.primaryColor
                                     : AppColors.secTextColor,
@@ -225,19 +231,19 @@ class _ProductsState extends State<Products> {
                                             },
                                             child: BoldText(
                                                 text: 'Boston Lettuce',
-                                                size: 18,
+                                                size: w!/20,
                                                 color: AppColors.primaryColor),
                                           ),
                                           Row(
                                             children: [
                                               BoldText(
                                                   text: '1.10',
-                                                  size: 14,
+                                                  size: w!/26,
                                                   color:
                                                       AppColors.primaryColor),
                                               ModifiedText(
-                                                  text: '€ / piece',
-                                                  size: 14,
+                                                  text: ' € / piece',
+                                                  size: w!/26,
                                                   color: AppColors.secTextColor)
                                             ],
                                           ),
@@ -267,8 +273,8 @@ class _ProductsState extends State<Products> {
                                                           color: AppColors
                                                               .secTextColor,
                                                         ))),
-                                                const SizedBox(
-                                                  width: 30,
+                                                 SizedBox(
+                                                  width: size.width*0.08,
                                                 ),
                                                 Container(
                                                     height: 40,
@@ -287,9 +293,7 @@ class _ProductsState extends State<Products> {
                                                         child: const Icon(
                                                             CupertinoIcons
                                                                 .cart))),
-                                                const SizedBox(
-                                                  width: 20,
-                                                )
+
                                               ],
                                             ),
                                           )

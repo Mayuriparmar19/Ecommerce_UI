@@ -3,9 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/Components/text.dart';
 import 'package:foodapp_ui/Constants/colors.dart';
-import 'package:foodapp_ui/Pages/bottom_nav.dart';
-import 'package:foodapp_ui/Pages/cat.dart';
-
 import '../Constants/conste.dart';
 import 'card_payment.dart';
 

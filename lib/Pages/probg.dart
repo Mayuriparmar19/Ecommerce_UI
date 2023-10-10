@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/Constants/colors.dart';
+import 'package:foodapp_ui/Constants/conste.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ProductBg extends StatefulWidget {
@@ -34,7 +35,9 @@ class _ProductBgState extends State<ProductBg> {
                 ),
               ),
             ));
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
+    w = MediaQuery.of(context).size.width;
+    h = MediaQuery.of(context).size.height;
     return Scaffold(
       extendBodyBehindAppBar: true,
       body: Column(

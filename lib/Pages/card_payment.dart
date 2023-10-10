@@ -42,7 +42,7 @@ class _CardPayState extends State<CardPay> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: BoldText(
                   text: 'Credit / Debit card',
-                  size: 25,
+                  size: w!/18,
                   color: AppColors.primaryColor),
             ),
             Image(
@@ -172,7 +172,7 @@ class _CardPayState extends State<CardPay> {
                             decoration: InputDecoration(
                               hintText: 'EX:09/24',
                               hintStyle: TextStyle(
-                                  color: AppColors.secTextColor, fontSize: 15),
+                                  color: AppColors.secTextColor, fontSize: w!/26),
                               filled: true,
                               fillColor: AppColors.white,
                               border: OutlineInputBorder(
@@ -206,7 +206,7 @@ class _CardPayState extends State<CardPay> {
                               suffixIcon: Image.asset('Assets/Images/Hint.png'),
                               hintText: 'EX:456',
                               hintStyle: TextStyle(
-                                  color: AppColors.secTextColor, fontSize: 15),
+                                  color: AppColors.secTextColor, fontSize: w!/26),
                               filled: true,
                               fillColor: AppColors.white,
                               border: OutlineInputBorder(
@@ -250,7 +250,7 @@ class _CardPayState extends State<CardPay> {
                       },
                       child: BoldText(
                         text: 'Use this card',
-                        size: 19,
+                        size: w!/20,
                         color: AppColors.white,
                       ),
                     ),

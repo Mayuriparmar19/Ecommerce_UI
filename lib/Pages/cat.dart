@@ -4,6 +4,8 @@ import 'package:foodapp_ui/Components/text.dart';
 import 'package:foodapp_ui/Constants/colors.dart';
 import 'package:foodapp_ui/Pages/product.dart';
 
+import '../Constants/conste.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -17,6 +19,9 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    w = MediaQuery.of(context).size.width;
+    h = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
@@ -52,12 +57,12 @@ class _HomeState extends State<Home> {
                 prefixIcon: Icon(
                   CupertinoIcons.search,
                   color: AppColors.primaryColor,
-                  size: 25,
+                  size: w!/16,
                 ),
                 hintText: 'Search',
                 hintStyle: TextStyle(
                   color: AppColors.borderColor,
-                  fontSize: 20,
+                  fontSize: w!/20,
                   fontStyle: FontStyle.italic,
                 ),
                 focusedBorder: OutlineInputBorder(
@@ -80,8 +85,8 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+           SizedBox(
+            height: size.height*0.01,
           ),
           Expanded(
             child: GridView.builder(
@@ -99,7 +104,7 @@ class _HomeState extends State<Home> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Products(),
+                          builder: (context) =>const  Products(),
                         ));
                   },
                   child: Container(
@@ -119,11 +124,11 @@ class _HomeState extends State<Home> {
                       children: [
                         BoldText(
                             text: 'Vegetables',
-                            size: 18.8,
+                            size: w!/20.8,
                             color: AppColors.primaryColor),
                         ModifiedText(
                             text: '(29)',
-                            size: 14,
+                            size: w!/25,
                             color: AppColors.secTextColor)
                       ],
                     ),
