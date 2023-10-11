@@ -67,12 +67,12 @@ class _FirstScreenState extends State<FirstScreen> {
                         ),
                         ModifiedText(
                           color: AppColors.secTextColor,
-                          size: w!/21.5,
+                          size: w! / 21.5,
                           text:
                               "       When placing an order, select the option\n“Contactless delivery” and the courier will leave\n                          your order at the door.",
                         ),
-                         SizedBox(
-                          height: size.height*0.03,
+                        SizedBox(
+                          height: size.height * 0.03,
                         ),
                         SizedBox(
                           height: size.height * .06,
@@ -88,7 +88,7 @@ class _FirstScreenState extends State<FirstScreen> {
                             },
                             child: BoldText(
                               text: 'Order Now',
-                              size: w!/20,
+                              size: w! / 20,
                               color: AppColors.white,
                             ),
                           ),
@@ -98,37 +98,46 @@ class _FirstScreenState extends State<FirstScreen> {
                         ),
                         TextButton(
                           onPressed: () {
-                           Get.defaultDialog(
+                            Get.defaultDialog(
                               title: 'Exit',
-                              titleStyle: TextStyle(color: AppColors.primaryColor,fontSize: w!/16,fontWeight:FontWeight.w900,),
+                              titleStyle: TextStyle(
+                                color: AppColors.primaryColor,
+                                fontSize: w! / 16,
+                                fontWeight: FontWeight.w900,
+                              ),
                               titlePadding: const EdgeInsets.all(2),
                               middleText: 'Are you sure You want to Exit',
-                              middleTextStyle: TextStyle(color: AppColors.secTextColor,fontSize: w!/20),
+                              middleTextStyle: TextStyle(
+                                  color: AppColors.secTextColor,
+                                  fontSize: w! / 20),
                               contentPadding: const EdgeInsets.all(10),
                               confirm: TextButton(
-
                                   onPressed: () {
-                                    SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                                    SystemChannels.platform
+                                        .invokeMethod('SystemNavigator.pop');
                                     // Get.back();
                                   },
-                                  child: ModifiedText(text: 'Yes',color: AppColors.selected,size: w!/20,)),
+                                  child: ModifiedText(
+                                    text: 'Yes',
+                                    color: AppColors.selected,
+                                    size: w! / 20,
+                                  )),
                               cancel: TextButton(
-
                                   onPressed: () {
-                                    Navigator.pop(context);
-                                  }, child:ModifiedText(text: 'No',color: AppColors.selected,size: w!/20,)),
-                              // content: Column(
-                              //    children: [
-                              //       Text('hey'),
-                              // with the use of content you can add multiple lines in dialog box
-                              //    ],
-                              // )
+                                    // Navigator.pop(context);
+                                    Get.back();
+                                  },
+                                  child: ModifiedText(
+                                    text: 'No',
+                                    color: AppColors.selected,
+                                    size: w! / 20,
+                                  )),
                             );
                           },
                           child: ModifiedText(
                             text: 'Dismiss',
                             color: AppColors.secTextColor,
-                            size: w!/20,
+                            size: w! / 20,
                           ),
                         ),
                       ],

@@ -42,6 +42,7 @@ dependencies:
   animated_switch: ^0.0.2
   get: ^4.6.5
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
